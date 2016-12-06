@@ -11,6 +11,11 @@ const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
 const app = express();
 
+var publicPath = path.resolve(__dirname, 'public');
+
+// We point to our static assets
+app.use(express.static(publicPath));
+
 if (isDeveloping) {
   const compiler = webpack(config);
   const middleware = webpackMiddleware(compiler, {

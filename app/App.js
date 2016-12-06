@@ -8,9 +8,20 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <div className={styles.app}>
-        bar
-      </div>
+      <div className="row">
+          <header>
+    
+        </header>
+        <section class="instagram-wrap">
+    test
+        </section>
+        <footer>
+    
+        </footer>
+        <section class="footer-bottom">
+    
+        </section>
+        </div>
     );
   }
 }
